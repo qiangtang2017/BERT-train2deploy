@@ -1,1 +1,6 @@
+预备工作：
+1、下载中文bert预训练模型，到处都是，不再介绍；
+2、创建output目录
+3、执行以下命令：
 python run_mobile.py --task_name=setiment --do_train=true --do_eval=true --data_dir=./dat  --vocab_file=../bert/chinese_L-12_H-768_A-12/vocab.txt --bert_config_file=../bert/chinese_L-12_H-768_A-12/bert_config.json --init_checkpoint=../bert/chinese_L-12_H-768_A-12/bert_model.ckpt --max_seq_length=128 --train_batch_size=32 --learning_rate=2e-5 --num_train_epochs=5.0 --output_dir=./output
+4、训练结束后，在output目录下看训练完的模型
